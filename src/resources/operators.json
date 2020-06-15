@@ -1,0 +1,529 @@
+[
+    {
+        "name": "THRM-EX",
+        "rarity": 1,
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["Robot", "Nuker"]
+    },
+    {
+        "name": "Castle-3",
+        "rarity": 1,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["Robot", "Support"]
+    },
+    {
+        "name": "Lancet-2",
+        "rarity": 1,
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Robot", "Healing"]
+    },
+    {
+        "name": "12F",
+        "rarity": 2,
+        "qualification": "Starter",
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": []
+    },
+    {
+        "name": "杜林",
+        "rarity": 2,
+        "qualification": "Starter",
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": []
+    },
+    {
+        "name": "巡林者",
+        "rarity": 2,
+        "qualification": "Starter",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": []
+    },
+    {
+        "name": "黑角",
+        "rarity": 2,
+        "qualification": "Starter",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": []
+    },
+    {
+        "name": "夜刀",
+        "rarity": 2,
+        "qualification": "Starter",
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": []
+    },
+    {
+        "name": "斑点",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "Healing"]
+    },
+    {
+        "name": "米格鲁",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense"]
+    },
+    {
+        "name": "泡普卡",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["AoE", "Survival"]
+    },
+    {
+        "name": "玫兰莎",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["Survival"]
+    },
+    {
+        "name": "月见夜",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "翎羽",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPS", "DPRecovery"]
+    },
+    {
+        "name": "香草",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery"]
+    },
+    {
+        "name": "芬",
+        "rarity": 3,
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery"]
+    },
+    {
+        "name": "空爆",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["AoE"]
+    },
+    {
+        "name": "安德切尔",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "克洛丝",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "史都华德",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "炎熔",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["AoE"]
+    },
+    {
+        "name": "安赛尔",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing"]
+    },
+    {
+        "name": "芙蓉",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing"]
+    },
+    {
+        "name": "梓兰",
+        "rarity": 3,
+        "position": "Ranged",
+        "class": "Supporter",
+        "affix": ["Slow"]
+    },
+    {
+        "name": "角峰",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense"]
+    },
+    {
+        "name": "蛇屠箱",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense"]
+    },
+    {
+        "name": "古米",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "Healing"]
+    },
+    {
+        "name": "艾丝黛尔",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["AoE", "Survival"]
+    },
+    {
+        "name": "缠丸",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["Survival", "DPS"]
+    },
+    {
+        "name": "慕斯",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "霜叶",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Slow"]
+    },
+    {
+        "name": "杜宾",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Support"]
+    },
+    {
+        "name": "红豆",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPS", "DPRecovery"]
+    },
+    {
+        "name": "清道夫",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery", "DPS"]
+    },
+    {
+        "name": "白雪",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["AoE", "Slow"]
+    },
+    {
+        "name": "流星",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS", "Debuff"]
+    },
+    {
+        "name": "杰西卡",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS", "Survival"]
+    },
+    {
+        "name": "夜烟",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["DPS", "Debuff"]
+    },
+    {
+        "name": "远山",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["AoE"]
+    },
+    {
+        "name": "格雷伊",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["AoE", "Slow"]
+    },
+    {
+        "name": "调香师",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing"]
+    },
+    {
+        "name": "末药",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing"]
+    },
+    {
+        "name": "地灵",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Supporter",
+        "affix": ["Slow"]
+    },
+    {
+        "name": "阿消",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["Shift"]
+    },
+    {
+        "name": "暗索",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["Shift"]
+    },
+    {
+        "name": "砾",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["FastRedeploy", "Defense"]
+    },
+    {
+        "name": "火神",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Survival", "Defense", "DPS"]
+    },
+    {
+        "name": "可颂",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "Shift"]
+    },
+    {
+        "name": "雷蛇",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "DPS"]
+    },
+    {
+        "name": "临光",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "Healing"]
+    },
+    {
+        "name": "诗怀雅",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Support"]
+    },
+    {
+        "name": "幽灵鲨",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["AoE", "Survival"]
+    },
+    {
+        "name": "因陀罗",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Survival"]
+    },
+    {
+        "name": "德克萨斯",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery", "CrowdControl"]
+    },
+    {
+        "name": "凛冬",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery", "Support"]
+    },
+    {
+        "name": "守林人",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS", "Nuker"]
+    },
+    {
+        "name": "普罗旺斯",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "陨星",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["AoE", "Debuff"]
+    },
+    {
+        "name": "白金",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "蓝毒",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "夜魔",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["DPS", "Healing", "Slow"]
+    },
+    {
+        "name": "华法琳",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing", "Support"]
+    },
+    {
+        "name": "赫默",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing"]
+    },
+    {
+        "name": "白面鸮",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing", "Support"]
+    },
+    {
+        "name": "真理",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Supporter",
+        "affix": ["Slow", "DPS"]
+    },
+    {
+        "name": "初雪",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Supporter",
+        "affix": ["Debuff"]
+    },
+    {
+        "name": "梅尔",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Supporter",
+        "affix": ["Summon", "CrowdControl"]
+    },
+    {
+        "name": "食铁兽",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["Shift", "Slow"]
+    },
+    {
+        "name": "狮蝎",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["DPS", "Survival"]
+    },
+    {
+        "name": "崖心",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["Shift", "DPS"]
+    },
+    {
+        "name": "红",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Specialist",
+        "affix": ["FastRedeploy", "CrowdControl"]
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "星熊",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "DPS"]
+    },
+    {
+        "name": "塞雷娅",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Defender",
+        "affix": ["Defense", "Healing", "Support"]
+    },
+    {
+        "name": "银灰",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Support"]
+    },
+    {
+        "name": "斯卡蒂",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Survival"]
+    },
+    {
+        "name": "陈",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["Nuker", "DPS"]
+    },
+    {
+        "name": "推进之王",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery", "DPS"]
+    },
+    {
+        "name": "能天使",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "伊芙利特",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Ranged",
+        "class": "Caster",
+        "affix": ["AoE", "Debuff"]
+    },
+    {
+        "name": "夜莺",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing", "Support"]
+    },
+    {
+        "name": "闪灵",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing", "Support"]
+    }
+]
