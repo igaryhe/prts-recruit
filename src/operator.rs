@@ -1,7 +1,7 @@
-use serde::Deserialize;
+use serde::{ Serialize, Deserialize };
 use std::fmt;
 
-#[derive(Deserialize, Debug, Clone, Eq, PartialEq, Hash)]
+#[derive(Serialize, Deserialize, Debug, Clone, Eq, PartialEq, Hash)]
 pub enum Tag {
     #[serde(alias = "新手")]
     Starter,

@@ -4,6 +4,7 @@ pub mod bot;
 use operator::{Tag, Operator};
 use itertools::Itertools;
 use std::collections::{HashMap, HashSet};
+use serde_plain;
 
 fn query(tag: Tag, ops: &Vec<operator::Operator>) -> HashSet<usize> {
     let mut result = HashSet::<usize>::new();
@@ -133,8 +134,16 @@ pub fn get_ops() -> Vec<operator::Operator> {
 pub fn format_result(result: Vec<(Vec<Tag>, Vec<usize>)>, operators: &Vec<operator::Operator>) -> String {
     let mut output = String::new();
     result.into_iter().for_each(|(key, val)| {
-        output.push_str(format!("*{:?}*\n", key).as_str());
+        output.push('*');
+        key.into_iter()
+            .for_each(|tag|output.push_str(
+                format!("{} + ",serde_plain::to_string(&tag).unwrap()).as_str()));
+        output.remove(output.len() - 1);
+        output.remove(output.len() - 1);
+        output.remove(output.len() - 1);
+        output.push_str("*\n");
         val.into_iter().for_each(|i| output.push_str(format!("{} ", operators[i]).as_str()));
+        output.remove(output.len() - 1);
         output.push_str(format!("\n\n").as_str());
     });
     output
@@ -142,7 +151,7 @@ pub fn format_result(result: Vec<(Vec<Tag>, Vec<usize>)>, operators: &Vec<operat
 
 pub fn parse_string(input: String) -> Vec<Tag> {
     let tag_list: Vec<_> = input.split_whitespace()
-        .map(|word| serde_json::from_str(format!("\"{}\"", word).as_str()))
+        .map(|word| serde_plain::from_str(word))
         .collect::<Vec<Result<Tag, _>>>();
     tag_list.into_iter().filter(|option| match option {
         Ok(_) => true,
