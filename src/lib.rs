@@ -97,7 +97,12 @@ fn filter(comb: Vec<Vec<Tag>>, list: HashMap<Tag, HashSet<usize>>, ops: &Vec<ope
     });
     result.sort_by(|a, b| avg(&a.1, ops).partial_cmp(&avg(&b.1, ops)).unwrap());
     result.reverse();
-    result.into_iter().filter(|(_, op)| avg(op, ops) > 4.1).collect()
+    result.into_iter().filter(|(_, op)| {
+        let mut r3_count = 0;
+        op.into_iter().for_each(|i| if ops[*i].get_rarity() == 3 { r3_count = r3_count + 1});
+        if r3_count > 3 { false }
+        else { true }
+    }).collect()
 }
 
 pub fn process(tag_list: Vec<Tag>, ops: &Vec<operator::Operator>) -> Vec<(Vec<Tag>, Vec<usize>)> {
