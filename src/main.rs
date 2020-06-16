@@ -1,7 +1,7 @@
 use prts_recruit::{process, get_ops, format_result, parse_string, bot::Bot, operator::Tag};
 use tide::Request;
 use telegram_types::bot::methods::{DeleteWebhook, SetWebhook, ChatTarget, SendMessage};
-use telegram_types::bot::types::{Update, UpdateContent};
+use telegram_types::bot::types::{Update, UpdateContent, ParseMode};
 
 #[async_std::main]
 async fn main() -> surf::Result<()> {
@@ -22,7 +22,8 @@ async fn main() -> surf::Result<()> {
                         let result = process(tag_list, &operators);
                         format_result(result, &operators)
                 };
-                bot.call(SendMessage::new(target, output)).await.unwrap();
+                bot.call(SendMessage::new(target, output)
+                         .parse_mode(ParseMode::Markdown)).await.unwrap();
             },
             _ => ()
         }
