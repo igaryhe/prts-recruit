@@ -1,31 +1,39 @@
-use arknights_tags_bot::{operator, query};
+use prts_recruit::{process, get_ops, format_result, bot::Bot};
 use serde_json;
+use surf::http_types::Result;
+use tide::Request;
+use telegram_types::bot::methods::{DeleteWebhook, SetWebhook, ChatTarget, SendMessage};
+use telegram_types::bot::types::{Update, UpdateContent};
 
-fn main() {
-    let file = include_str!("resources/operators.json");
-    let operators: Vec<operator::Operator> = serde_json::from_str(file).unwrap();
-    let mut query = query::Query::Affix(operator::Affix::DPS);
-    let mut query_two = query::Query::Affix(operator::Affix::Defense);
-    let result = query.exec(&operators);
-    let result_two = query_two.exec(&operators);
-    let joined = join(&result, &result_two);
-    joined.iter().for_each(|i| println!("{}", operators[*i].get_name()));
-}
-
-fn join(query_one: &Vec<usize>, query_two: &Vec<usize>) -> Vec<usize> {
-    let mut result = Vec::<usize>::new();
-    let mut i = 0;
-    let mut j = 0;
-    while i < query_one.len() && j < query_two.len() {
-        if query_one[i] == query_two[j] {
-            result.push(query_one[i]);
-            i = i + 1;
-            j = j + 1;
-        } else if query_one[i] < query_two[j] {
-            i = i + 1;
-        } else {
-            j = j + 1;
+#[async_std::main]
+async fn main() -> Result<()> {
+    let operators = get_ops();
+    let bot = Bot::new();
+    bot.call(DeleteWebhook).await?;
+    bot.call(SetWebhook::new(&bot.url).max_connections(100)).await?;
+    let mut app = tide::new();
+    app.at(&bot.token).post(|mut req: Request<()>| async move {
+        let Update {content, ..} = req.body_json().await.unwrap();
+        match content {
+            UpdateContent::Message(msg) => {
+                let bot = Bot::new();
+                let target = ChatTarget::Id(msg.chat.id.clone());
+                let tag_list = serde_json::from_str(msg.text.unwrap().as_str());
+                let output = match tag_list {
+                    Ok(tags) => {
+                        let result = process(tags, &operators);
+                        format_result(result, &operators)
+                    },
+                    Err(_) => {
+                        format!("Wrong input format!")
+                    },
+                };
+                bot.call(SendMessage::new(target, output)).await?;
+            },
+            _ => ()
         }
-    }
-    result
+        Ok("")
+    });
+    app.listen("127.0.0.1:9561").await?;
+    Ok(())
 }
