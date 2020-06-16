@@ -5,7 +5,7 @@ use std::fmt;
 pub enum Tag {
     #[serde(alias = "新手", rename(serialize = "新手"))]
     Starter,
-    #[serde(alias = "资深干员"), rename(serialize = "资深干员")]
+    #[serde(alias = "资深干员", rename(serialize = "资深干员"))]
     Senior,
     #[serde(alias = "高级资深干员", rename(serialize = "高级资深干员"))]
     Top,
