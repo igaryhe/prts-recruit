@@ -127,9 +127,9 @@ pub fn get_ops() -> Vec<operator::Operator> {
 pub fn format_result(result: Vec<(Vec<Tag>, Vec<usize>)>, operators: &Vec<operator::Operator>) -> String {
     let mut output = String::new();
     result.into_iter().for_each(|(key, val)| {
-        output.push_str(format!("{:?}: ", key).as_str());
+        output.push_str(format!("*{:?}*\n", key).as_str());
         val.into_iter().for_each(|i| output.push_str(format!("{} ", operators[i]).as_str()));
-        output.push_str(format!("\n").as_str());
+        output.push_str(format!("\n\n").as_str());
     });
     output
 }
