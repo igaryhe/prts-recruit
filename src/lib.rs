@@ -121,7 +121,8 @@ fn avg(list: &Vec<usize>, ops: &Vec<operator::Operator>) -> f32 {
             count = count + 1;
         }
     });
-    sum as f32 / count as f32
+    if count == 0 { 0.0 }
+    else { sum as f32 / count as f32 }
 }
 
 pub fn get_ops() -> Vec<operator::Operator> {
