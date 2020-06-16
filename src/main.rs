@@ -1,5 +1,4 @@
-use prts_recruit::{process, get_ops, format_result, bot::Bot};
-use serde_json;
+use prts_recruit::{process, get_ops, format_result, parse_string, bot::Bot, operator::Tag};
 use tide::Request;
 use telegram_types::bot::methods::{DeleteWebhook, SetWebhook, ChatTarget, SendMessage};
 use telegram_types::bot::types::{Update, UpdateContent};
@@ -16,16 +15,12 @@ async fn main() -> surf::Result<()> {
             UpdateContent::Message(msg) => {
                 let bot = Bot::new();
                 let target = ChatTarget::Id(msg.chat.id.clone());
+                let text = msg.text.unwrap();
                 let operators = get_ops();
-                let tag_list = serde_json::from_str(msg.text.unwrap().as_str());
-                let output = match tag_list {
-                    Ok(tags) => {
-                        let result = process(tags, &operators);
+                let tag_list: Vec<Tag> = parse_string(text);
+                let output = {
+                        let result = process(tag_list, &operators);
                         format_result(result, &operators)
-                    },
-                    Err(_) => {
-                        format!("Wrong input format!")
-                    },
                 };
                 bot.call(SendMessage::new(target, output)).await.unwrap();
             },

@@ -133,3 +133,13 @@ pub fn format_result(result: Vec<(Vec<Tag>, Vec<usize>)>, operators: &Vec<operat
     });
     output
 }
+
+pub fn parse_string(input: String) -> Vec<Tag> {
+    let tag_list: Vec<_> = input.split_whitespace()
+        .map(|word| serde_json::from_str(format!("\"{}\"", word).as_str()))
+        .collect::<Vec<Result<Tag, _>>>();
+    tag_list.into_iter().filter(|option| match option {
+        Ok(_) => true,
+        _ => false,
+    }).map(|option| option.unwrap()).collect::<Vec<Tag>>()
+}
