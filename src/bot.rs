@@ -1,5 +1,4 @@
 use std::env;
-use surf::http_types::Result;
 use telegram_types::bot::methods::{Method, TelegramResult};
 
 #[derive(Clone, Debug)]
@@ -18,7 +17,7 @@ impl Bot {
         }
     }
 
-    pub async fn call<T: Method>(&self, params: T) -> Result<T::Item> {
+    pub async fn call<T: Method>(&self, params: T) -> surf::Result<T::Item> {
         let url = T::url(&self.token);
         let mut res = surf::post(url).body_json(&params)?.await?;
         let TelegramResult {result, ..} = res.body_json().await?;
