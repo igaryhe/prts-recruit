@@ -22,8 +22,10 @@ async fn main() -> surf::Result<()> {
                         let result = process(tag_list, &operators);
                         format_result(result, &operators)
                 };
-                bot.call(SendMessage::new(target, output)
-                         .parse_mode(ParseMode::Markdown)).await.unwrap();
+                if output.len() != 0 {
+                    bot.call(SendMessage::new(target, output)
+                        .parse_mode(ParseMode::Markdown)).await.unwrap();
+                } 
             },
             _ => ()
         }
