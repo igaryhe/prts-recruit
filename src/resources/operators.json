@@ -243,6 +243,13 @@
         "affix": ["DPRecovery", "DPS"]
     },
     {
+        "name": "桃金娘",
+        "rarity": 4,
+        "position": "Melee",
+        "class": "Vanguard",
+        "affix": ["DPRecovery", "Healing"]
+    },
+    {
         "name": "白雪",
         "rarity": 4,
         "position": "Ranged",
@@ -293,6 +300,13 @@
     },
     {
         "name": "末药",
+        "rarity": 4,
+        "position": "Ranged",
+        "class": "Medic",
+        "affix": ["Healing"]
+    },
+    {
+        "name": "苏苏洛",
         "rarity": 4,
         "position": "Ranged",
         "class": "Medic",
@@ -381,6 +395,14 @@
         "position": "Melee",
         "class": "Guard",
         "affix": ["DPS", "Survival"]
+    },
+    {
+        "name": "星极",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["DPS", "Defense"]
     },
     {
         "name": "德克萨斯",
@@ -495,6 +517,14 @@
         "affix": ["Summon", "CrowdControl"]
     },
     {
+        "name": "格劳克斯",
+        "rarity": 5,
+        "qualification": "Senior",
+        "position": "Ranged",
+        "class": "Supporter",
+        "affix": ["Slow", "CrowdControl"]
+    },
+    {
         "name": "食铁兽",
         "rarity": 5,
         "qualification": "Senior",
@@ -567,6 +597,14 @@
         "affix": ["Nuker", "DPS"]
     },
     {
+        "name": "赫拉格",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Melee",
+        "class": "Guard",
+        "affix": ["Survival", "DPS"]
+    },
+    {
         "name": "推进之王",
         "rarity": 6,
         "qualification": "Top",
@@ -576,6 +614,14 @@
     },
     {
         "name": "能天使",
+        "rarity": 6,
+        "qualification": "Top",
+        "position": "Ranged",
+        "class": "Sniper",
+        "affix": ["DPS"]
+    },
+    {
+        "name": "黑",
         "rarity": 6,
         "qualification": "Top",
         "position": "Ranged",

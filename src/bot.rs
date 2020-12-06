@@ -1,5 +1,6 @@
 use std::env;
 use telegram_types::bot::methods::{Method, TelegramResult};
+use serde_json::json;
 
 #[derive(Clone, Debug)]
 pub struct Bot {
@@ -19,7 +20,7 @@ impl Bot {
 
     pub async fn call<T: Method>(&self, params: T) -> surf::Result<T::Item> {
         let url = T::url(&self.token);
-        let mut res = surf::post(url).body_json(&params)?.await?;
+        let mut res = surf::post(url).body(json!(&params)).await?;
         let TelegramResult {result, ..} = res.body_json().await?;
         Ok(result.unwrap())
     }
